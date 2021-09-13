@@ -1,0 +1,45 @@
+html{
+    font-size: 100%;
+    box-sizing:border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+$StrongCyan:hsl(171, 66%, 44%);
+$LightBlue: hsl(233, 100%, 69%);
+$DarkGrayishBlue: hsl(210, 10%, 33%);
+$GrayishBlue: hsl(201, 11%, 66%);
+$white: hsl(0, 0%, 100%);
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size:1.125rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+// flexbox
+.flex{
+
+    display:flex;
+    flex-direction: column;
+
+    &-jc-sb{
+        justify-content: space-between;
+    }
+    &-jc-c{
+        justify-content: center;
+    }
+    &-ai-c{
+        align-items: center;
+    }
+}
+//buttons
+button{
+    &:hover{
+        opacity: 0.75;
+    }
+}

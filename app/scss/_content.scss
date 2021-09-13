@@ -1,0 +1,66 @@
+.header{
+    background-image: url(/images/bg-header-desktop.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding:7.75rem 00;
+
+    @include breakpoint-down(small){
+        padding: 5.9375rem 1.625rem;
+        background-position: 18% 15%;
+    }
+
+    .w-content{
+        text-align: center;
+
+        h1{
+            font-size: 2.6875rem;
+            color: $DarkGrayishBlue;
+            margin-top: 69px;
+            margin-bottom: 25px;
+            @include breakpoint-down(small){
+                font-size: 2rem;
+            }
+        }
+        p{
+            text-align: center;
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+            color: $GrayishBlue;
+
+            @include breakpoint-down(small){
+                font-size: 1.075rem;
+                margin-bottom: 2.5rem;
+            }
+        }
+        .group-btn{
+            button{
+                width: 14.125rem;
+                padding: 1.125rem 2.1875rem;
+                font-size: 1.125rem;
+                color: $white;
+                border: none;
+                border-radius:26px;
+
+                @include breakpoint-down(small){
+                   width: 20.625rem; 
+                }
+            }
+            >:first-child{
+                background-color: $StrongCyan;
+
+                @include breakpoint-down(small){
+                    margin-bottom: 1.1875rem;
+                 }
+            }
+            >:last-child{
+                background-color: $LightBlue;
+
+            }
+
+        }
+       
+    }
+    
+   
+}
