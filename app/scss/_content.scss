@@ -3,11 +3,15 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    flex-direction: column;
     padding:7.75rem 00;
 
     @include breakpoint-down(small){
+        background-image: url(/images/bg-header-mobile.png);
+        background-size: cover;
+        background-position: center;
         padding: 5.9375rem 1.625rem;
-        background-position: 18% 15%;
+        
     }
 
     .w-content{
@@ -24,43 +28,133 @@
         }
         p{
             text-align: center;
-            font-size: 1.25rem;
             margin-bottom: 3rem;
-            color: $GrayishBlue;
 
             @include breakpoint-down(small){
-                font-size: 1.075rem;
                 margin-bottom: 2.5rem;
             }
-        }
-        .group-btn{
-            button{
-                width: 14.125rem;
-                padding: 1.125rem 2.1875rem;
-                font-size: 1.125rem;
-                color: $white;
-                border: none;
-                border-radius:26px;
-
-                @include breakpoint-down(small){
-                   width: 20.625rem; 
-                }
-            }
-            >:first-child{
-                background-color: $StrongCyan;
-
-                @include breakpoint-down(small){
-                    margin-bottom: 1.1875rem;
-                 }
-            }
-            >:last-child{
-                background-color: $LightBlue;
-
-            }
-
         }
        
     }
     
    
 }
+
+.main-section{
+    @include breakpoint-down(small){
+        padding: 00 1.625rem;
+         
+     }
+    .services-info{
+        width:58%;
+        margin: 0 auto;
+        text-align: center;
+
+        @include breakpoint-down(small){
+            width: 100%; 
+        }
+    }
+    .services-cont{
+        margin-top: 5.125rem;
+        margin-bottom: 9.625rem;
+
+        @include breakpoint-down(small){
+            margin-top: 3.25rem;
+            margin-bottom: 9.5rem;
+            flex-direction: column;
+        }
+
+        img{
+            position: relative;
+            right: 12%;
+
+            @include breakpoint-down(small){
+                position: relative;
+                right: 0;
+                width: 100%; 
+            }
+
+        }
+        .services-group{
+            padding: 4.5rem 2rem;
+
+            @include breakpoint-down(small){
+                padding: 0;
+                
+            }
+
+            .services-item{
+                width: 55%;
+                p{
+                    font-size: 0.875rem;
+                }
+                @include breakpoint-down(small){
+                    margin-top: 2.875rem;
+                    text-align: center;
+                    width: 100%; 
+                }
+            }
+        }
+    }
+    .services-divices{
+        .img-devices{
+            margin-top: 6.875rem;
+            margin-bottom: 10.5rem;
+
+            @include breakpoint-down(small){
+                margin-top: 3.3125rem;
+                margin-bottom: 6.625rem;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .services-workflow{
+        .services-cont-wf{
+            text-align: center;
+            align-items: baseline;
+            margin-top: 4.8125rem;
+            
+
+            @include breakpoint-down(small){
+                flex-direction: column;
+            }
+
+            .workflow-item{
+                width: 26%;
+                padding-right:2.5625rem;
+                p{
+                    font-size: 0.875rem;
+                }
+
+                @include breakpoint-down(small){
+                    padding: 0;
+                    margin-top: 2.875rem;
+                    width: 100%; 
+                }
+            }
+           
+        }
+
+    }
+    .services-comp{
+        margin-top: 5.218rem;
+        margin-bottom: 5.218rem;
+
+        @include breakpoint-down(small){
+            flex-direction: column;
+            margin-top: 5.218rem;
+            margin-bottom: 8.25rem;  
+
+        }
+    }
+    .services-info{
+        .group-btn{
+            margin-top: 6.375rem;
+            margin-bottom: 9.375rem;
+        }
+    }
+
+}
+

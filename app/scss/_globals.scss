@@ -25,7 +25,7 @@ body{
 .flex{
 
     display:flex;
-    flex-direction: column;
+    
 
     &-jc-sb{
         justify-content: space-between;
@@ -37,9 +37,69 @@ body{
         align-items: center;
     }
 }
-//buttons
-button{
-    &:hover{
-        opacity: 0.75;
+h2{
+    font-size: 2.125rem;
+    color: $DarkGrayishBlue;
+    @include breakpoint-down(small){
+        font-size:1.875rem;
     }
 }
+h3{
+    font-size: 1.125rem;
+    color: $DarkGrayishBlue;
+    @include breakpoint-down(small){
+        font-size: 1.25rem;
+    }
+}
+
+p{
+    font-size: 1.25rem;
+    color: $GrayishBlue;
+    @include breakpoint-down(small){
+        font-size: 1.075rem;
+        
+    }
+}
+
+//buttons
+.group-btn{
+    button{
+        width: 14.125rem;
+        padding: 1.125rem 2.1875rem;
+        font-size: 1.125rem;
+        color: $white;
+        border: none;
+        border-radius:26px;
+
+        &:hover{
+            opacity: 0.75;
+        }
+
+        @include breakpoint-down(small){
+           width: 100%; 
+        }
+    }
+    >:first-child{
+        background-color: $StrongCyan;
+        margin-right:0.9375rem;
+
+        @include breakpoint-down(small){
+            margin: 0;
+            margin-bottom: 1.1875rem;
+         }
+    }
+    >:last-child{
+        background-color: $LightBlue;
+
+    }
+
+}
+
+figure{
+    margin: 18px 55px 18px 15px;
+    @include breakpoint-down(small){
+        margin: 0;
+        margin-top: 3.25rem;
+    }
+}
+
