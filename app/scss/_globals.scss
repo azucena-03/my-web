@@ -27,8 +27,8 @@ body{
     display:flex;
     
 
-    &-jc-sb{
-        justify-content: space-between;
+    &-jc-sa{
+        justify-content: space-around;
     }
     &-jc-c{
         justify-content: center;
@@ -63,6 +63,7 @@ p{
 
 //buttons
 .group-btn{
+    text-align: center;
     button{
         width: 14.125rem;
         padding: 1.125rem 2.1875rem;
@@ -78,6 +79,7 @@ p{
         @include breakpoint-down(small){
            width: 100%; 
         }
+       
     }
     >:first-child{
         background-color: $StrongCyan;
@@ -99,7 +101,12 @@ figure{
     margin: 18px 55px 18px 15px;
     @include breakpoint-down(small){
         margin: 0;
-        margin-top: 3.25rem;
+        margin-top: 0;
+        margin-bottom: 3rem;
+    }
+    @include breakpoint-down(medium){
+        margin-top: 0;
+        
     }
 }
 

@@ -14,6 +14,8 @@
         
     }
 
+    
+
     .w-content{
         text-align: center;
 
@@ -42,9 +44,14 @@
 
 .main-section{
     @include breakpoint-down(small){
-        padding: 00 1.625rem;
+        padding: 0 1.625rem;
          
      }
+
+     @include breakpoint-down(medium){
+        padding: 0  3rem;
+        
+    }
     .services-info{
         width:58%;
         margin: 0 auto;
@@ -63,12 +70,23 @@
             margin-bottom: 9.5rem;
             flex-direction: column;
         }
+        @include breakpoint-down(medium){
+            margin-top: 3.25rem;
+            margin-bottom: 9.5rem;
+            flex-direction: column;
+        }
 
         img{
             position: relative;
             right: 12%;
 
             @include breakpoint-down(small){
+                position: relative;
+                right: 0;
+                width: 100%; 
+            }
+
+            @include breakpoint-down(medium){
                 position: relative;
                 right: 0;
                 width: 100%; 
@@ -93,6 +111,11 @@
                     text-align: center;
                     width: 100%; 
                 }
+                @include breakpoint-down(medium){
+                    margin-top: 2.875rem;
+                    text-align: center;
+                    width: 100%; 
+                }
             }
         }
     }
@@ -102,6 +125,14 @@
             margin-bottom: 10.5rem;
 
             @include breakpoint-down(small){
+                margin-top: 3.3125rem;
+                margin-bottom: 6.625rem;
+                img{
+                    width: 100%;
+                }
+            }
+
+            @include breakpoint-down(medium){
                 margin-top: 3.3125rem;
                 margin-bottom: 6.625rem;
                 img{
@@ -133,6 +164,7 @@
                     margin-top: 2.875rem;
                     width: 100%; 
                 }
+                
             }
            
         }
@@ -144,12 +176,18 @@
 
         @include breakpoint-down(small){
             flex-direction: column;
-            margin-top: 5.218rem;
-            margin-bottom: 8.25rem;  
+            flex-wrap: wrap;
+            margin-top: 6.375rem;
+            margin-bottom: 8.4375rem;  
 
         }
+        @include breakpoint-down(medium){
+            
+            flex-wrap: wrap;
+            
+        }
     }
-    .services-info{
+    .w-content-2{
         .group-btn{
             margin-top: 6.375rem;
             margin-bottom: 9.375rem;
@@ -157,4 +195,98 @@
     }
 
 }
+
+.footer{
+    background-color:#F6F5F5;
+    padding: 2.625rem 0;
+
+    @include breakpoint-down(medium){
+        padding: 2.625rem  3rem;
+        
+    }
+    .footer-menu{
+        img{
+            width: 40%;
+            margin-right: 4.5rem;
+
+            @include breakpoint-down(small){
+                margin: 0;
+    
+            }
+        }
+        .menu-item{
+            .m-item{
+                display: block;
+                margin-right: 6.0625rem;
+                margin-bottom: 1.3125rem;
+                text-decoration: none;
+                color:$GrayishBlue;
+                transition: all 300ms ease-in-out;
+
+                &:hover{
+                    color:$StrongCyan;
+                }
+
+                @include breakpoint-down(small){
+                    margin: 0;
+                    margin-bottom:1.25rem;
+                }
+            }
+
+        }   
+        
+        @include breakpoint-down(small){
+            text-align: center;
+        }
+
+        .f-menu{
+            @include breakpoint-down(small){
+                text-align: center;
+                margin-top: 2.125rem;
+                margin-bottom: 2.125rem;
+    
+            }
+
+        }
+    
+    }
+    .f-social{
+        a{
+            &:not(:last-child){
+                margin-right: 1.4375rem;
+
+                @include breakpoint-down(small){
+                    margin-right: 2.125rem;
+                }
+
+            }
+            svg{
+                fill:#4C545C;
+                transition: all 300ms ease-in-out;
+
+                &:hover{
+                    fill: $StrongCyan;
+
+                }
+            }
+        }
+
+    }
+
+    &, .footer-menu, .f-menu {
+        @include breakpoint-down(small){
+            flex-direction: column;
+        }
+
+    }
+
+    .footer{
+        @include breakpoint-down(small){
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+    }
+}
+
 
